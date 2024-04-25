@@ -36,7 +36,7 @@ class Tarefa
     {
         try {
             $conn = self::getConnection();
-            $sql = "SELECT * FROM tarefas WHERE id = {$id}";
+            $sql = "SELECT * FROM blog WHERE id = {$id}";
             //ultilização do método QUERY do objeto $conn tipo PDO
             $result = $conn->query($sql);
             $linha = $result->fetch(PDO::FETCH_ASSOC);
@@ -111,8 +111,8 @@ class Tarefa
                 $prepare->bindValue(":RA", $tarefa['RA'], PDO::PARAM_STR);
                 $prepare->execute();
                 $conn = null;
-                print "Salvo com sucesso!";
-                header("location: https://localhost/Blog/lista_tarefa.php");
+                //print "Salvo com sucesso Senac!";
+                //header("location: http://localhost/Blog/index.php?class=Blog_form");
             } else {
                 $conn = self::getConnection();
                 //pegando o PROXIMO ID VIA FUNCAO
@@ -131,11 +131,10 @@ class Tarefa
                 $prepare->bindValue(":data", $tarefa['data'], PDO::PARAM_STR);
                 $prepare->bindValue(":hora", $tarefa['hora'], PDO::PARAM_STR);
                 $prepare->bindValue(":RA", $tarefa['RA'], PDO::PARAM_STR);
-                $prepare->execute();
                 $count = $prepare->execute();
-                echo $count;
+                //echo $count;
                 $conn = null;
-                header("location: htpps://localhost/Blog/lista_tarefa.php");
+                //header("location: http://localhost/Blog/index.php?class=Blog_form");
             }
         } catch (Exception $error) {
 

@@ -12,25 +12,28 @@ class PostForm
     // $this->html = file_get_contents("./html/forms/form_Tarefa.html");
     $this->html = file_get_contents("./html/forms/form_Blog.html");
     $this->dados['id'] = "";
-    $this->dados['descricao'] = "";
+    $this->dados['post'] = "";
     $this->dados['data'] = "";
     $this->dados['hora'] = "";
+    $this->dados['RA'] = "";
+
 
     }
     public function show()
     {
         //mostra o formulário na tela
         //carregasndo so componentes
-        $header = file_get_contents("./html/Componentes/header.html");
-        $footer = file_get_contents("./html/Componentes/footer.html");
+        // $header = file_get_contents("./html/Componentes/header.html");
+        // $footer = file_get_contents("./html/Componentes/footer.html");
         //trocando a marcação no html
-        $this->html = str_replace('{header}', $header, $this->html);
-        $this->html = str_replace('{footer}', $footer, $this->html);
+        // $this->html = str_replace('{header}', $header, $this->html);
+        // $this->html = str_replace('{footer}', $footer, $this->html);
         //variaveis de marcacao
         $this->html = str_replace('{id}', $this->dados['id'], $this->html);
-        $this->html = str_replace('{descricao}', $this->dados['descricao'], $this->html);
+        $this->html = str_replace('{post}', $this->dados['post'], $this->html);
         $this->html = str_replace('{data}', $this->dados['data'], $this->html);
         $this->html = str_replace('{hora}', $this->dados['hora'], $this->html);
+        $this->html = str_replace('{RA}', $this->dados['RA'], $this->html);
         print $this->html;
         
 

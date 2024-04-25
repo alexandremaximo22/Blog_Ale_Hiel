@@ -12,23 +12,27 @@
     <div class="container">
 
         <h3>Inserir no Blog</h3>
-        <form method="post" action="./index.php?class=PostForm&method=save" class="tarefa">
+        <form method="post" action="./index.php?class=PostForm&method=save">
             <label for="id">ID:</label>
-            <input type="int" readonly="1" id="id" name="id" value="{id}">
+            <input type="int" readonly="1" id="id" name="id" value="{id}"></input>
+            
             <label for="tarefa">Posta algo ae:</label>
-            <input type="text" id="post" name="post" value="{post}">
+            <input type="text" id="post" name="post" value="{post}"></input>
+            
             <label for="data">Data de Execução:</label>
-            <input type="date" id="data" name="data" value="{data}">
+            <input type="date" id="data" name="data" value="{data}"></input>
+            
             <label for="hora">Hora de Execução:</label>
-            <input type="time" id="hora" name="hora" value="{hora}">
+            <input type="time" id="hora" name="hora" value="{hora}"></input>
+            
             <label for="ra">RA:</label>
-            <input type="text" id="RA" name="RA" value="{RA}">
-            <div class="btn-">
+            <input type="text" id="RA" name="RA" value="{RA}"></input>
+            
                 <!-- aqui deve salvar e mandar para o outro arquivo que eu não sei ainda perdão hiel ;-; -->
-                <input type="submit" value="Salvar">
+            <button class="btn btn-danger" type="submit" value="Salvar">
                 <!-- Aq vai mandar para o listar_tarefa.php -->
-                <!-- <input type="submit" value="Cancelar"> -->
-            </div>
+                
+       
             
             <!-- Se Desejar  ->  onclick="window.location='tarefa_form_insert.php'" -->
             <!-- Recarregar a página após inserção -> window.location.reload() " -->
