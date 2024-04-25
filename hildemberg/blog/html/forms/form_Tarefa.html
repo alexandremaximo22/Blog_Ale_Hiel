@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tarefas Senac</title>
+    <link rel="stylesheet" href="./css/tarefas.css">
+</head>
+
+<body class="container">
+
+    {header}
+
+    <form method="post" action="./index.php?class=Tarefa_form&method=save" class="tarefa">
+        <label for="id">ID:</label>
+        <input type="int" readonly="1" id="id" name="id" value="{id}">
+        <label for="tarefa">Tarefa:</label>
+        <input type="text" id="tarefa" name="tarefa" value="{descricao}">
+        <label for="data">Data de Execução:</label>
+        <input type="date" id="data" name="data" value="{data}">
+        <label for="hora">Hora de Execução:</label>
+        <input type="time" id="hora" name="hora" value="{hora}">
+        <label for="R_A">Registro Academico do aluno:</label>
+        <input type="text" id="raAluno" name="raAluno" value="{raAluno}">
+        <input type="submit" value="Salvar">
+        <a href='http://localhost/04/classeLVL7?class=Lista_tarefa&method=listar'>Cancelar</a>
+        <!-- Se Desejar  ->  onclick="window.location='tarefa_form_insert.php'" -->
+        <!-- Recarregar a página após inserção -> window.location.reload() " -->
+    </form>
+    {footer}
+
+</body>
+
+</html>

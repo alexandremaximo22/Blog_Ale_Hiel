@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do ALE & HIL</title>
+    <link rel="stylesheet" href="./css/index.css">  <!-- CSS -->
+    <link rel="shortcut icon" type="image/ico" href="./img/senac.ico"/> <!-- icone -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="logo">
+            <img src="./img/senac_heder.png" alt="Logo SENAC">
+        </div>
+        <div class="user-info">
+            <span id="user-label">Usuário</span>
+            <span id="date-time"></span>
+        </div>
+    </div>
+</header>
+    
+
+<table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>PUBLICAÇÃO</th>
+                <th>DATA</th>
+                <th>HORA</th>
+                <th>R.A.</th>
+            </tr>
+        </thead>
+        <tbody> 
+        
+        </tbody>
+        
+        <tr>
+            <td>{id}</td>
+                <td>{POST}</td>
+                <td>{data}</td>
+                <td>{hora}</td>
+                <td>{RA}</td>
+                <!-- botoesa -->
+                <!-- editar -->
+            <td>
+                <!-- <a href='Tarefa_Form.php?action=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a> -->
+                <a href='./index.php?class=Tarefa_Form&method=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a>
+            </td>
+
+            <!-- exlcuir -->
+            <td>
+                <a href='./index.php?class=Lista_tarefa&method=delete&id={id}'><img class="btt_list" src='./img/delete.ico'></a>
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+    <div class="container">
+        <p>&copy; 2024 Blog do ALE & HIL. Curso Técnico de Desenvolcimento de Sistemas.</p>
+    </div>
+</footer>
+</body>
+</html>
