@@ -1,0 +1,83 @@
+/* Usei a poha do gpt pra fazer o css pq tava ficando maluco */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/orange-and-blue-fire-and-ice-gradient-wallpaper-preview.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.container {
+    width: 600px;
+    padding: 20px;
+    background-color: #ffffff88;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do formulário */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="int"],
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="submit"],
+a2 {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="submit"]{
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+    background-color: #f7091c;
+    color: #000000b7;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(50% - 5px); /* Define a largura com um espaço entre eles */
+}
+cancelar{
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+    background-color: #009b05;
+    color: #9528dd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+input[type="submit"]:hover,
+a:hover {
+    background-color: #b84624cc;
+}
+h3{
+    margin-left: 38%;
+}
