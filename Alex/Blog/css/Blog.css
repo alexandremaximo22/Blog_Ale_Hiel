@@ -81,3 +81,54 @@ a:hover {
 h3{
     margin-left: 38%;
 }
+
+/* Estilos para o rodapé */
+footer {
+    position: fixed; /* Torna o rodapé fixo */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    /* background-color: #3700ff; Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px; /* Preenchimento interno */
+    text-align: center; /* Alinha o texto no centro */
+}
+textarea {
+    width: 580px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Aqui está a propriedade border-radius */
+    resize: none; /* Isso impede que o usuário redimensione o textarea */
+}
+.butao{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #007bff; /* Adiciona uma borda ao botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estilo para quando o mouse passa sobre o botão */
+.butao:hover {
+    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+    border-color: #0056b3; /* Altera a cor da borda ao passar o mouse */
+}
+.apagar{
+    margin-left: 414px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ff0000; /* Adiciona uma borda ao botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    background-color: #ff0000; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+}
+.apagar:hover {
+    background-color: #740707; /* Altera a cor de fundo ao passar o mouse */
+    border-color: #b30000; /* Altera a cor da borda ao passar o mouse */
+
+}

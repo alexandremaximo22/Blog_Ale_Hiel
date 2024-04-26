@@ -1,67 +1,106 @@
+/* Estilos para o corpo do documento */
 body {
-    margin: 20px;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('../img/pexels-arunbabuthomas-1156684.jpg'); /* Corrigindo o caminho da imagem */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #ffffff;
+    margin: 20px; /* Margem ao redor do corpo */
+    padding: 0; /* Nenhum preenchimento interno */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    background-image: url('../img/pexels-arunbabuthomas-1156684.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center; /* Centraliza a imagem no corpo */
+    color: #ffffff; /* Cor do texto */
+    position: relative; /* Define como o contexto de posicionamento para os elementos filhos */
+    min-height: 100vh; /* Altura mínima do corpo para ocupar pelo menos a altura da janela de visualização */
 }
+
+/* Estilos para o cabeçalho */
+header {
+    position: fixed; /* Torna o cabeçalho fixo */
+    top: 0; /* Alinha o cabeçalho no topo */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    z-index: 1000; /* Define a ordem de empilhamento para garantir que o cabeçalho fique acima do conteúdo */
+}
+
+/* Estilos para o container */
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    display: flex; /* Usa um layout flexível */
+    justify-content: space-between; /* Distribui os itens uniformemente com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 10px 20px; /* Preenchimento interno */
 }
 
+/* Estilos para o logo */
 .logo img {
-    width: 100px;
+    width: 100px; /* Define a largura máxima do logotipo */
 }
 
+/* Estilos para as informações do usuário */
 .user-info {
-    display: flex;
-    align-items: center;
+    display: flex; /* Usa um layout flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
 }
 
+/* Estilos para o rótulo do usuário */
 #user-label {
-    margin-right: 10px;
-    color: #ffffff; /* Cor do texto branco */
+    margin-right: 10px; /* Margem à direita */
+    color: #ffffff; /* Cor do texto */
 }
 
+/* Estilos para a data e hora */
 #date-time {
-    font-size: 14px;
-    color: #ffffff; /* Cor do texto branco */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
 }
 
+/* Estilos para o conteúdo */
 .content {
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    background-color: #ffffff;
+    padding: 20px; /* Preenchimento interno */
+    margin-bottom: 100px; /* Margem inferior para acomodar o rodapé fixo */
+    border: 1px solid #cccccc; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+    background-color: #ffffff; /* Cor de fundo */
 }
 
+/* Estilos para o rodapé */
 footer {
-    background-color: #808080;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+    position: fixed; /* Torna o rodapé fixo */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    background-color: #808080; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px; /* Preenchimento interno */
+    text-align: center; /* Alinha o texto no centro */
 }
 
+/* Estilos para a tabela de publicações */
 .publications-table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 80%; /* Defina a largura máxima da tabela */
+    margin: 0 auto; /* Margens automáticas para centralizar a tabela horizontalmente */
+    border-collapse: collapse; /* Remove espaços entre as células */
+    background-color: #cccccc; /* Cor de fundo */
+    margin-top: 20px; /* Adiciona margem superior para separar do cabeçalho */
+    margin-bottom: 20px; /* Adiciona margem inferior para separar do rodapé */
 }
 
-.publications-table th, .publications-table td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
+/* Estilos para cabeçalhos e células da tabela */
+.publications-table th,
+.publications-table td {
+    border: 1px solid #dddddd; /* Borda */
+    padding: 8px; /* Preenchimento interno */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
+/* Estilos para cabeçalhos da tabela */
 .publications-table th {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #333333; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estilos para os ícones menores */
+.btt_list {
+    width: 20px; /* Largura */
+    height: 20px; /* Altura */
+    margin-right: 5px; /* Margem à direita */
+    display: inline-block; /* Exibe os ícones em linha */
+    vertical-align: middle; /* Alinha os ícones verticalmente no centro */
 }

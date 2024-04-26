@@ -47,7 +47,7 @@ class PostForm
             //usando a classe criada em PDF anterior 
             //retorna um vetor e que passa os dados
             $this->dados = Tarefa::find($id);
-            print "Tarefa Localizada com Sucesso.....";
+            // print "Tarefa Localizada com Sucesso.....";
         } catch (Exception $error) {
 
             echo "<pre>";
