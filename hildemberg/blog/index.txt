@@ -21,10 +21,10 @@
             <span id="date-time"></span>
         </div>
     </div>
-</header>
+    </header>
     
 
-<table>
+    <table class= "publications-table shadow p-3 mb-5 bg-body-tertiary rounded">
         <thead>
             <tr>
                 <th>ID</th>
@@ -40,14 +40,13 @@
         
         <tr>
             <td>{id}</td>
-                <td>{POST}</td>
-                <td>{data}</td>
-                <td>{hora}</td>
-                <td>{RA}</td>
-                <!-- botoesa -->
-                <!-- editar -->
+            <td>{POST}</td>
+            <td>{data}</td>
+            <td>{hora}</td>
+            <td>{RA}</td>
+
+            <!-- editar -->
             <td>
-                <!-- <a href='Tarefa_Form.php?action=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a> -->
                 <a href='./index.php?class=Tarefa_Form&method=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a>
             </td>
 
@@ -59,9 +58,9 @@
     </table>
 
     <footer>
-    <div class="container">
-        <p>&copy; 2024 Blog do ALE & HIL. Curso Técnico de Desenvolcimento de Sistemas.</p>
-    </div>
-</footer>
+        <div class="container">
+            <p>&copy; 2024 Blog do ALE & HIL. Curso Técnico de Desenvolcimento de Sistemas.</p>
+        </div>
+    </footer>
 </body>
 </html>

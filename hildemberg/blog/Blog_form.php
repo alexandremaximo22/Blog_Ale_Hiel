@@ -46,4 +46,20 @@ class Blog_form {
       exit();
     }
   }
+ ////////////////////DELETAR//////////////////////
+  public function delete($param){
+    //recebe parametros para deletar
+    try {
+      $id = (int) $param['id'];
+      //retorna um vetor que passa para os dados
+      $this->dados = Tarefa::delete($id);
+      print "Post deletado com sucesso . . .";
+      header("location: http://localhost/202404/blog/index.php?class=Blog_form&method=listar");
+
+    }catch (Exception $e) {
+      echo "<pre>";
+      print_r($e);
+      exit();
+    }
+  }
 }
