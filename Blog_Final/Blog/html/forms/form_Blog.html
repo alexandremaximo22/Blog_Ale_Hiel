@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Tarefas Senac</title>
+    <link rel="stylesheet" href="./css/Blog.css">
+  
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <h3>Publicar no Blog</h3>
+        <form method="post" action="./index.php?class=PostForm&method=save">
+            <label for="id">ID:</label>
+            <input type="int" readonly="1" id="id" name="id" value="{id}">
+            
+            <label for="tarefa">Gostaria de Compartilhar algo???</label>
+            <textarea id="post" name="post" rows="2" cols="76" maxlength="100"></textarea>
+            <label for="data">Data da Publicação:</label>
+            <input type="date" id="data" name="data" value="{data}">
+            
+            <label for="hora">Hora da Publicação:</label>
+            <input type="time" id="hora" name="hora" value="{hora}">
+            
+            <label for="ra">RA:</label>
+            <input type="text" id="RA" name="RA" value="{RA}">
+            
+            <!-- Botão de Salvar -->
+            <button class="butao" type="submit" value="Salvar">Salvar</button>
+            <!-- Botão de Limpar -->
+            <button class="apagar" type="reset" value="Limpar">Limpar</button>
+
+        </form>
+    </div>
+    <footer></footer>
+
+</body>
+
+</html>
