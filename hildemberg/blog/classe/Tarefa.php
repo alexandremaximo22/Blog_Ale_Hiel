@@ -14,7 +14,7 @@ class Tarefa
                 //gerar o proximo ID - Método Theylon
                 self::$conn = new PDO("mysql:dbname={$banco};host={$servidor};charset=utf8", $usuario, $senha);
                 self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                echo "conectado";
+                // echo "conectado";
                 return self::$conn;
             } catch (Exception $error) {
 
@@ -23,7 +23,7 @@ class Tarefa
                 exit();
             }
         }
-    }
+    } 
 
     public static function find($id) // GET TAREFA
     { 
@@ -46,7 +46,6 @@ class Tarefa
     {
         try {
             //Listar tarefas
-
             $conn = self::getConnection();
             $id_int = (int) $id;
             $sql = "DELETE FROM posts WHERE id = {$id_int}";
@@ -88,4 +87,50 @@ class Tarefa
             exit();
         }
     }
+    public static function like($post){
+        try {
+            // $id = (int) $post['id'];
+            // $like = (int) $post['likePost'];
+            if (!empty($post['id'])) {
+                $conn = self::getConnection();
+                //pegando o ID via get
+                $id = intval($post['id']);
+                $likePost = intval(($post['likePost']));
+                $likePost ++ ;
+                // var_dump($id);
+                // var_dump($likePost);
+                // exit();
+                $sql = "UPDATE posts SET likePost = :likePost  WHERE id = :id";
+                $stmt = $conn->prepare($sql);
+                $stmt->bindValue(':likePost', $likePost, PDO::PARAM_INT);
+                $stmt->bindValue(':id', $id,PDO::PARAM_INT);
+                $stmt->execute();
+                $conn = null;
+                header('Location: http://localhost/202404/blog/index.php?class=Blog_form&method=listar');
+                
+            }else{
+                $conn = self::getConnection();
+                //pegando as variaveis de id deslike
+                $id = intval($post['id']);
+                $DesLike = intval(($post['DesLike']));
+                $DesLike ++ ;
+                // var_dump($id);
+                // var_dump($DesLike);
+                // exit();  
+                $sql = "UPDATE posts SET DesLike = :DesLike WHERE id = :id";
+                $stmt = $conn->prepare($sql);
+                $stmt->bindValue(':DesLike', $DesLike, PDO::PARAM_INT);
+                $stmt->bindValue(':id', $id,PDO::PARAM_INT);
+                $stmt->execute();
+                $conn = null;
+                // header('Location: http://http://localhost/202404/blog/index.php?class=Blog_form&method=listar');
+            }
+        } catch (Exception $error) {
+            echo $error->getMessage();
+            $conn = null;
+            echo "**Deu erro";
+        }
+    }
+
 }
+

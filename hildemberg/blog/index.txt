@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="./css/index.css">  <!-- CSS -->
     <link rel="shortcut icon" type="image/ico" href="./img/senac.ico"/> <!-- icone -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</head>
+   </head>
 <body>
     <header>
     <div class="container">
@@ -32,29 +30,35 @@
                 <th>DATA</th>
                 <th>HORA</th>
                 <th>R.A.</th>
+                <th>Like</th>
+                <th>DesLike</th>
             </tr>
         </thead>
         <tbody> 
-        
+           <tr>
+                <td>{id}</td>
+                <td>{POST}</td>
+                <td>{data}</td>
+                <td>{hora}</td>
+                <td>{RA}</td>
+                <!-- ICONE LIKE- DESLIKE -->
+                <td>
+                    <a href='./index.php?class=PostForm&method=edit&id={id}'><img class="btt_list" src='./img/icons8-coração.gif'></a>
+                    <span id="user-label"><H5>{L}</H5></span>
+                </td>
+                <td>
+                    <a href='./index.php?class=PostForm&method=edit&id={id}'><img class="btt_list" src='./img/icons8-gosto-disso.gif'></a>
+                    <span id="user-label"><H5>{D}</H5></span>
+                </td>
+                <!-- BOTOES -->
+                <td>
+                    <a href='./index.php?class=PostForm&method=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a>
+                </td>
+                <td>
+                    <a href='./index.php?class=Blog_form&method=delete&id={id}'><img class="btt_list" src='./img/delete.ico'></a>
+                </td>
+            </tr>
         </tbody>
-        
-        <tr>
-            <td>{id}</td>
-            <td>{POST}</td>
-            <td>{data}</td>
-            <td>{hora}</td>
-            <td>{RA}</td>
-
-            <!-- editar -->
-            <td>
-                <a href='./index.php?class=Tarefa_Form&method=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a>
-            </td>
-
-            <!-- exlcuir -->
-            <td>
-                <a href='./index.php?class=Lista_tarefa&method=delete&id={id}'><img class="btt_list" src='./img/delete.ico'></a>
-            </td>
-        </tr>
     </table>
 
     <footer>
@@ -62,5 +66,8 @@
             <p>&copy; 2024 Blog do ALE & HIL. Curso Técnico de Desenvolcimento de Sistemas.</p>
         </div>
     </footer>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
 </body>
 </html>

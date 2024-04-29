@@ -9,6 +9,7 @@ class Blog_form {
   public function __construct(){
     $this->html = file_get_contents('./html/index.html');
   }
+   ////////////////////SHOW//////////////////////
   public function show(){
     //mostrando o formulario na tela 
     //carregando os componentes
@@ -38,6 +39,8 @@ class Blog_form {
         $item = str_replace('{data}', $postar['data'], $item);
         $item = str_replace('{hora}', $postar['hora'], $item);
         $item = str_replace('{RA}', $postar['RA'], $item);
+        $item = str_replace('{L}', $postar['likePost'], $item);
+        $item = str_replace('{D}', $postar['DesLike'], $item);
         $this->items .= $item;
       }
     } catch (Exception $e) {
@@ -61,5 +64,24 @@ class Blog_form {
       print_r($e);
       exit();
     }
+  }
+   ////////////////////CURTIR//////////////////////
+  public function curtir($param){ 
+    //recebe parametros para deletar
+    try {
+      $id = (int) $param['id'];
+      $like = (int) $param['likePost'];
+      $deslike = (int) $param['DesLike'];
+      //retorna um vetor que passa para os dados
+      $this->dados = Tarefa::like($param);
+      print "CURTIDA";
+       header("location: http://localhost/202404/blog/index.php?class=Blog_form&method=listar");
+
+    }catch (Exception $e) {
+      echo "<pre>";
+      print_r($e);
+      exit();
+    }
+
   }
 }

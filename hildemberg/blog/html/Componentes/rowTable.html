@@ -4,14 +4,20 @@
     <td>{data}</td>
     <td>{hora}</td>
     <td>{RA}</td>
-    <!-- botoesa -->
-    <!-- editar -->
+     <!-- ICONE LIKE- DESLIKE -->
+     <td>
+        <a href='./index.php?class=Blog_form&method=curtir&id={id}&likePost={L}'><img class="btt_list" src='./img/icons8-coração.gif'></a>
+        <span class="like-text"><H5>{L}</H5></span>
+    </td>
+     <td>
+        <a href='./index.php?class=Blog_form&method=edit&id={id}&DesLike={D}'><img class="btt_list" src='./img/icons8-gosto-disso.gif'></a>
+        <span  class="dislike-text"><H5>{D}</H5></span></td>
+    <!-- BOTOES -->
     <td>
-        <!-- <a href='Tarefa_Form.php?action=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a> -->
         <a href='./index.php?class=PostForm&method=edit&id={id}' ><img  class="btt_list" src='./img/pencil.ico'></a>
     </td>
-    <!-- exlcuir -->
     <td>
         <a href='./index.php?class=Blog_form&method=delete&id={id}'><img class="btt_list" src='./img/delete.ico'></a>
     </td>
 </tr>
+

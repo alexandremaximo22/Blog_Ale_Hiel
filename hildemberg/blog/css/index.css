@@ -14,7 +14,7 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
-    position: fixed; /* Torna o cabeçalho fixo */
+    position: relative; /* Torna o cabeçalho fixo */
     top: 0; /* Alinha o cabeçalho no topo */
     width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
     background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
@@ -63,24 +63,25 @@ header {
 
 /* Estilos para o rodapé */
 footer {
-    position: fixed; /* Torna o rodapé fixo */
+    /* position: fixed; Torna o rodapé fixo */
     bottom: 0; /* Alinha o rodapé na parte inferior */
     width: 100%; /* Garante que o rodapé ocupe toda a largura */
-    background-color: #808080; /* Cor de fundo */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
     color: #ffffff; /* Cor do texto */
     padding: 20px; /* Preenchimento interno */
     text-align: center; /* Alinha o texto no centro */
 }
 
+
 /* Estilos para a tabela de publicações */
 .publications-table {
     width: 80%; /* Defina a largura máxima da tabela */
-    margin: 0 auto; /* Margens automáticas para centralizar a tabela horizontalmente */
+    margin: 60px auto 20px; /* Margens automáticas para centralizar a tabela horizontalmente e adicionar espaçamento superior */
     border-collapse: collapse; /* Remove espaços entre as células */
-    background-color: #cccccc; /* Cor de fundo */
-    margin-top: 20px; /* Adiciona margem superior para separar do cabeçalho */
-    margin-bottom: 20px; /* Adiciona margem inferior para separar do rodapé */
+    background-color: rgba(204, 204, 204, 0.8); /* Cor de fundo com transparência */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Define uma sombra mais suave */
 }
+
 
 /* Estilos para cabeçalhos e células da tabela */
 .publications-table th,
@@ -103,4 +104,10 @@ footer {
     margin-right: 5px; /* Margem à direita */
     display: inline-block; /* Exibe os ícones em linha */
     vertical-align: middle; /* Alinha os ícones verticalmente no centro */
+}
+
+/* Estilos para o texto "Like" e "DesLike" */
+.like-text,
+.dislike-text {
+    color: #000000; /* Cor do texto em branco */
 }
