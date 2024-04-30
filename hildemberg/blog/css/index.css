@@ -53,24 +53,14 @@ header {
 }
 
 /* Estilos para o conteúdo */
-.content {
-    padding: 20px; /* Preenchimento interno */
-    margin-bottom: 100px; /* Margem inferior para acomodar o rodapé fixo */
-    border: 1px solid #cccccc; /* Borda */
-    border-radius: 5px; /* Borda arredondada */
-    background-color: #ffffff; /* Cor de fundo */
-}
+/* .content { */
+    /* padding: 20px; Preenchimento interno */
+    /* margin-bottom: 100px; Margem inferior para acomodar o rodapé fixo */
+    /* border: 1px solid #cccccc; Borda */
+    /* border-radius: 5px; Borda arredondada */
+    /* background-color: #ffffff; Cor de fundo */
+/* } */
 
-/* Estilos para o rodapé */
-footer {
-    /* position: fixed; Torna o rodapé fixo */
-    bottom: 0; /* Alinha o rodapé na parte inferior */
-    width: 100%; /* Garante que o rodapé ocupe toda a largura */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-    color: #ffffff; /* Cor do texto */
-    padding: 20px; /* Preenchimento interno */
-    text-align: center; /* Alinha o texto no centro */
-}
 
 
 /* Estilos para a tabela de publicações */
@@ -78,21 +68,26 @@ footer {
     width: 80%; /* Defina a largura máxima da tabela */
     margin: 60px auto 20px; /* Margens automáticas para centralizar a tabela horizontalmente e adicionar espaçamento superior */
     border-collapse: collapse; /* Remove espaços entre as células */
-    background-color: rgba(204, 204, 204, 0.8); /* Cor de fundo com transparência */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Define uma sombra mais suave */
-}
+ }
 
 
 /* Estilos para cabeçalhos e células da tabela */
-.publications-table th,
+/* .publications-table th, */
 .publications-table td {
     border: 1px solid #dddddd; /* Borda */
     padding: 8px; /* Preenchimento interno */
     text-align: left; /* Alinha o texto à esquerda */
+    /* background-color: rgba(0, 0, 0, 0); Cor de fundo com transparência (ajuste o valor do último canal para alterar a transparência) */
+    /* box-shadow: 0 0 10px rgb(21, 255, 4); Define uma sombra mais suave */
+    background-color: transparent; /* Cor de fundo transparente */ 
+    
 }
 
 /* Estilos para cabeçalhos da tabela */
 .publications-table th {
+    padding: 8px; /* Preenchimento interno */
+    text-align: center; /* Alinha o texto no centro */
+    border: 1px solid #dddddd; /* Borda */
     background-color: #333333; /* Cor de fundo */
     color: #ffffff; /* Cor do texto */
 }
@@ -110,4 +105,15 @@ footer {
 .like-text,
 .dislike-text {
     color: #000000; /* Cor do texto em branco */
+}
+
+/* Estilos para o rodapé */
+footer {
+    position: fixed;
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px; /* Preenchimento interno */
+    text-align: center; /* Alinha o texto no centro */
 }
